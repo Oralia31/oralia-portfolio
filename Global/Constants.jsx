@@ -378,3 +378,7 @@ export const process= {
     RAMDOM_STRING: "cca3066ab1d1ba95bdf85b4ead15bfbc",
    }
 }
+
+export const TEXTS = {
+  textLet: "Let's work together"
+}

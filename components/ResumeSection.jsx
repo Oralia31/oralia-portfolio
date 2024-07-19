@@ -38,11 +38,11 @@ const ResumeSection = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{ABOUT.title}</h3>
-                 <p className="w-auto text-white/60 mx-auto xl:mx-0 text-left">
+                <p className="w-auto text-white/60 mx-auto xl:mx-0 text-left">
                   {ABOUT.description}
                 </p>
                 <p className="w-auto text-white/60 mx-auto xl:mx-0 text-left">
-                  Let's connect on{" "}
+                  Let&apos;s connect on
                   <a
                     href="https://www.linkedin.com/in/oralia-rivera-vicente/"
                     className="text-accent"

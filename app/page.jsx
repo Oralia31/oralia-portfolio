@@ -9,7 +9,6 @@ import ResumeSection from "@/components/ResumeSection";
 import SkillsSection from "@/components/SkillsSection";
 import PortfolioSection from "@/components/PortfolioSection";
 
-
 const Home = () => {
   return (
     <div className="h-full mt-32 xl:mt-24">
@@ -19,7 +18,8 @@ const Home = () => {
           <div className="text-center md:text-left order-1 xl:order-none">
             <span className="text-xl">Front-end Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br />{" "}
+              Hello I&apos;m <br />
+              
               <span className="text-accent">Oralia Rivera</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">

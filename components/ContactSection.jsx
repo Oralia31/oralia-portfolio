@@ -1,6 +1,6 @@
 "use client";
 
-import { INFO } from "@/Global/Constants";
+import { INFO, TEXTS } from "@/Global/Constants";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -74,7 +74,7 @@ const ContactSection = () => {
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
               onSubmit={handleSubmit}
             >
-              <h3 className="text-4xl text-accent">Let's work together</h3>
+              <h3 className="text-4xl text-accent">{TEXTS.textLet}</h3>
               <p className="text-white/60">Write your message</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
