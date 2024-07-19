@@ -2,7 +2,7 @@
 
 const nextConfig = {
     output: 'export',
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/oralia-portafolio/' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/oralia-portfolio/' : '',
     basePath: process.env.NODE_ENV === 'production' ? '/oralia-portfolio' : '',
     images: {
       unoptimized: true
