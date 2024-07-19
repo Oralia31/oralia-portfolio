@@ -347,8 +347,7 @@ export const PROJECTS = [
     category: "Frontend",
     type: "Personal project",
     title: "Movies app",
-    description:
-      "Project developed using a public movie API.",
+    description: "Project developed using a public movie API.",
     stack: [{ name: "Html 5" }, { name: "CSS" }, { name: "CSS" }],
     image: "/assets/Projects/movies-app.png",
     live: "https://movie-app-mu-ruby.vercel.app/",
@@ -359,26 +358,26 @@ export const PROJECTS = [
     category: "Frontend",
     type: "Personal project",
     title: "Calculator",
-    description:
-      "Project developed to practice.",
+    description: "Project developed to practice.",
     stack: [{ name: "Html 5" }, { name: "CSS" }, { name: "JavaScript" }],
     image: "/assets/Projects/calculator.png",
     live: "https://calculator-eta-pied.vercel.app/",
     github: "https://github.com/Oralia31/Calculator",
   },
 ];
-export const URL ="http://api/sendEmail";
+export const URL = "http://api/sendEmail";
+export const URL_BACK = "https://oralia-portfolio.vercel.app/";
 
-export const process= {
-  env: { 
+export const process = {
+  env: {
     HOST: "smtp.gmail.com",
     PORT: 587,
-    EMAIL_USER: "oralia.rivera.isc@gmail.com", 
+    EMAIL_USER: "oralia.rivera.isc@gmail.com",
     EMAIL_PASS: "qdqjrgkjyrcbdsdg",
     RAMDOM_STRING: "cca3066ab1d1ba95bdf85b4ead15bfbc",
-   }
-}
+  },
+};
 
 export const TEXTS = {
-  textLet: "Let's work together"
-}
+  textLet: "Let's work together",
+};

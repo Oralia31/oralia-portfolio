@@ -1,14 +1,15 @@
 "use client";
 
-import { INFO, TEXTS } from "@/Global/Constants";
+import { INFO, TEXTS, URL_BACK } from "@/Global/Constants";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { process } from "@/Global/Constants";
+import Alert from "./Alert";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -19,12 +20,16 @@ const ContactSection = () => {
     message: "",
   });
 
+  const [showAlert, setShowAlert] = useState(false);
+  const formRef = useRef(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  {/*const handleSubmit = async (e) => {
+  {
+    /*const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch("app/api/sendEmail", {
@@ -46,14 +51,24 @@ const ContactSection = () => {
     }
   };
   
-  */}
+  */
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message sent successfully!");
-    e.target.submit();
-  };
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
 
+     // Limpiar el formulario
+     if (formRef.current) {
+      formRef.current.reset();
+    }
+
+    e.target.submit();
+
+  };
 
   return (
     <motion.section
@@ -73,6 +88,7 @@ const ContactSection = () => {
               method="POST"
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
               onSubmit={handleSubmit}
+              ref={formRef}
             >
               <h3 className="text-4xl text-accent">{TEXTS.textLet}</h3>
               <p className="text-white/60">Write your message</p>
@@ -118,9 +134,16 @@ const ContactSection = () => {
                 Send message
               </Button>
 
-              <input type="hidden" name="_next" value="http://localhost:3000" />
+              <input type="hidden" name="_next" value={URL_BACK} />
               <input type="hidden" name="_captcha" value="false" />
             </form>
+            {showAlert && (
+              <Alert
+                type="success"
+                message="Message sent successfully!"
+                onClose={() => setShowAlert(false)}
+              />
+            )}
           </div>
 
           {/** info */}
