@@ -141,6 +141,11 @@ export const EXPERIENCE = {
       position: "Front-End Developer Junior",
       duration: "February 2021 - July 2021",
     },
+    {
+      company: "Freelance",
+      position: "Independent",
+      duration: "February 2020-January 2021",
+    },
   ],
 };
 
