@@ -144,7 +144,8 @@ const PortfolioSection = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover rounded-md"
+                          //object-cover
+                          className="object-contain rounded-md"
                           alt={item.title}
                         />
                       </div>
